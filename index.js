@@ -57,14 +57,6 @@ async function hashEmployeePassword(employee) {
     return employee;
 }
 
-(async () => {
-    const employee = { password: "alzahra123" };
-    console.log(employee.password)
-    const hashedEmployee = await hashEmployeePassword(employee);
-    const verfiypassword = await compareSync(JSON.stringify(employee.password), hashedEmployee.password)
-    console.log(hashedEmployee.password ,verfiypassword) ; // Prints hashed password
-})();
-
 server.listen(port, "0.0.0.0", () => {
     console.log("application running");
     connectToDatabase();
