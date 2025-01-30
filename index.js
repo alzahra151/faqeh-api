@@ -50,12 +50,6 @@ async function connectToDatabase() {
         server.close();
     }
 }
-async function hashEmployeePassword(employee) {
-    const saltRounds = 10;
-    const salt = bcrypt.genSaltSync(saltRounds, "a"); // Generates salt synchronously
-    employee.password = bcrypt.hashSync(employee.password, salt); // Hashes password synchronously
-    return employee;
-}
 
 server.listen(port, "0.0.0.0", () => {
     console.log("application running");
