@@ -6,6 +6,7 @@ const cartRoutes=require('./cart')
 const orderRoutes = require('./order')
 const wishListRoutes = require('./wish_list')
 const categoryRoutes = require('./category')
+const fabricOrderRoutes = require('./fabric_order')
 const paypalRoutes = require('./paypal')
 
 routes.use("/api/v1/product", productRoutes);
@@ -14,6 +15,7 @@ routes.use("/api/v1/cart", cartRoutes);
 routes.use("/api/v1/order", orderRoutes);
 routes.use("/api/v1/wish-list", wishListRoutes);
 routes.use("/api/v1/category", categoryRoutes);
+routes.use("/api/v1/fabric-order", fabricOrderRoutes);
 routes.use("/api/v1", paypalRoutes);
 
 module.exports=routes
